@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'testing-kendo-ui-angular';
+  btnText = 'Click button below!';
+
+  onButtonClick() {
+    this.btnText = 'Congrats. You clicked.';
+  }
 }
