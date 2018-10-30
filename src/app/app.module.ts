@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { CategoriesService } from './services/northwind.service';
 
 
 
@@ -19,7 +20,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
     BrowserAnimationsModule,
     GridModule
   ],
-  providers: [],
+  providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

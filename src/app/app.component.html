@@ -8,3 +8,14 @@
   <h1>{{btnText}}</h1>
   <button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
 </div>
+<div class="kendo_grids">
+  <div class="kendo_grids_1">
+    <kendo-grid [data]="view | async" [loading]="view.loading" [pageSize]="state.take" [skip]="state.skip" [sort]="state.sort"
+      [sortable]="true" [pageable]="true" [scrollable]="'none'" (dataStateChange)="dataStateChange($event)">
+      <kendo-grid-column field="CategoryID" width="130"></kendo-grid-column>
+      <kendo-grid-column field="CategoryName" width="200"></kendo-grid-column>
+      <kendo-grid-column field="Description" [sortable]="false">
+      </kendo-grid-column>
+    </kendo-grid>
+  </div>
+</div>
