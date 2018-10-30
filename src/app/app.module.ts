@@ -1,26 +1,19 @@
+import { NgModule, enableProdMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { GridModule } from '@progress/kendo-angular-grid';
 import { AppComponent } from './app.component';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GridModule } from '@progress/kendo-angular-grid';
 import { CategoriesService } from './services/northwind.service';
 
-
-
+enableProdMode();
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    ButtonsModule,
-    BrowserAnimationsModule,
-    GridModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, GridModule, HttpClientModule, ButtonsModule],
+  declarations: [AppComponent],
   providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
